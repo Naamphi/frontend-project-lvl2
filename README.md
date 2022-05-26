@@ -10,7 +10,7 @@
 2) Генерация отчета в виде plain text, stylish и json
 ### Справочная информация по утилите:
 ```bash
-gendiff -h
+$gendiff -h
 ```
 ```bash
 Usage: gendiff [options] <filepath1> <filepath2>
