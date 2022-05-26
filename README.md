@@ -8,5 +8,5 @@
 
 1) Поддержка разных входных форматов: yaml, json
 2) Генерация отчета в виде plain text, stylish и json
-
+### Сравнение плоских файлов (JSON):
 [![asciicast](https://asciinema.org/a/htFkSf72YH4VkIFXOnpATYXxX.svg)](https://asciinema.org/a/htFkSf72YH4VkIFXOnpATYXxX)
