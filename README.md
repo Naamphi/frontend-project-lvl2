@@ -8,5 +8,20 @@
 
 1) Поддержка разных входных форматов: yaml, json
 2) Генерация отчета в виде plain text, stylish и json
+### Справочная информация по утилите:
+```bash
+gendiff -h
+```
+```bash
+Usage: gendiff [options] <filepath1> <filepath2>
+
+Compares two configuration files and shows a difference.
+
+Options:
+  -V, --version        output the version number
+  -f, --format <type>  output format
+  -h, --help           display help for command
+```
+
 ### Сравнение плоских файлов (JSON):
 [![asciicast](https://asciinema.org/a/htFkSf72YH4VkIFXOnpATYXxX.svg)](https://asciinema.org/a/htFkSf72YH4VkIFXOnpATYXxX)
