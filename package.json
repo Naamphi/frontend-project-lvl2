@@ -22,12 +22,18 @@
   "homepage": "https://github.com/Naamphi/frontend-project-lvl2#readme",
   "dependencies": {
     "commander": "^9.2.0",
+    "js-yaml": "^4.1.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.18.2",
     "eslint": "^8.16.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.3.0",
     "jest": "^28.1.0"
   }
 }
