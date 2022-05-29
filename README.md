@@ -28,3 +28,5 @@ Options:
 
 ### Сравнение плоских файлов (JSON):
 [![asciicast](https://asciinema.org/a/htFkSf72YH4VkIFXOnpATYXxX.svg)](https://asciinema.org/a/htFkSf72YH4VkIFXOnpATYXxX)
+### Сравнение плоских файлов (YAML):
+[![asciicast](https://asciinema.org/a/aTwa3WuKuWTokUQyGHr4bHVu4.svg)](https://asciinema.org/a/aTwa3WuKuWTokUQyGHr4bHVu4)
