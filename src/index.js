@@ -1,47 +1,25 @@
-import fs from 'fs';
 import path from 'path';
-import _ from 'lodash';
 import parsers from './parsers.js';
-
-const getPath = (filepath) => path.resolve(process.cwd(), filepath);
+import readFile from './readFile.js';
+import treeDiff from './findDiff.js';
+import format from './formatters/index.js';
 
 const getFileData = (filepath) => {
-  const fileData = fs.readFileSync(getPath(filepath), 'utf8');
-  const format = path.extname(filepath);
-  return parsers(fileData, format);
+  const fileData = readFile(filepath);
+  const getFileFormat = path.extname(filepath);
+  const parse = parsers(fileData, getFileFormat);
+
+  return parse;
 };
 
-const getDifference = (obj1, obj2, replacer = ' ', spaceCount = 2) => {
-  const uniqKeys = _.union(_.keys(obj1), _.keys(obj2));
-  const currentSpace = replacer.repeat(spaceCount);
-  const lines = _.sortBy(uniqKeys)
-    .map((key) => {
-      const key1 = _.has(obj1, key);
-      const key2 = _.has(obj2, key);
-      const value1 = obj1[key];
-      const value2 = obj2[key];
-      if (!key1) {
-        return [`+ ${key}: ${value2}`];
-      }
-      if (!key2) {
-        return [`- ${key}: ${value1}`];
-      }
-      if (_.isEqual(value1, value2)) {
-        return [`  ${key}: ${value1}`];
-      }
-      if (!_.isEqual(value1, value2)) {
-        return [`- ${key}: ${value1}`, `+ ${key}: ${value2}`];
-      }
-      throw new Error(`Unknown state: '${key}'!`);
-    }).flat();
-  const currentLines = lines.map((line) => `${currentSpace}${line}`);
-  return ['{', ...currentLines, '}'].join('\n');
-};
+const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
+  const content1 = getFileData(filepath1);
+  const content2 = getFileData(filepath2);
 
-const genDiff = (filepath1, filepath2) => {
-  const file1 = getFileData(filepath1);
-  const file2 = getFileData(filepath2);
-  return getDifference(file1, file2);
+  const difference = treeDiff(content1, content2);
+  const result = format(difference, formatName);
+
+  return result;
 };
 
 export default genDiff;
