@@ -30,3 +30,19 @@ Options:
 [![asciicast](https://asciinema.org/a/htFkSf72YH4VkIFXOnpATYXxX.svg)](https://asciinema.org/a/htFkSf72YH4VkIFXOnpATYXxX)
 ### Сравнение плоских файлов (YAML):
 [![asciicast](https://asciinema.org/a/aTwa3WuKuWTokUQyGHr4bHVu4.svg)](https://asciinema.org/a/aTwa3WuKuWTokUQyGHr4bHVu4)
+
+## Форматеры
+
+<div id="stylish">
+    <h3>Stylish</h3>
+</div>
+
+Stylish - форматер по умолчанию для библиотеки. Чтобы воспользоваться, выполните одну из следующих команд:
+
+```bash
+$gendiff -f stylish file1.json file2.json
+```
+```bash
+$gendiff file1.json file2.json
+```
+[![asciicast](https://asciinema.org/a/dE0kE7hWLxWdOn2FiAXpR8l9P.svg)](https://asciinema.org/a/dE0kE7hWLxWdOn2FiAXpR8l9P)
