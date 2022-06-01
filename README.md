@@ -51,4 +51,16 @@ $gendiff file1.json file2.json
     <h3>Plain</h3>
 </div>
 
+```bash
+$gendiff -f plain file1.json file2.json
+```
 [![asciicast](https://asciinema.org/a/S6UmpS0Xbb8H2olaPcOmw0QF1.svg)](https://asciinema.org/a/S6UmpS0Xbb8H2olaPcOmw0QF1)
+
+<div id="stylish">
+    <h3>JSON</h3>
+</div>
+
+```bash
+$gendiff -f json file1.json file2.json
+```
+[![asciicast](https://asciinema.org/a/ru07Bw2y5nShQ04aywszNaVn6.svg)](https://asciinema.org/a/ru07Bw2y5nShQ04aywszNaVn6)
