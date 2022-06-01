@@ -21,17 +21,17 @@ const stylish = (diff) => {
 
     const mark = {
       added: '+',
-      deleted: '-',
+      removed: '-',
       unchanged: ' ',
     };
 
     switch (node.status) {
       case 'added':
         return makeLine(node.value, mark.added);
-      case 'deleted':
-        return makeLine(node.value, mark.deleted);
+      case 'removed':
+        return makeLine(node.value, mark.removed);
       case 'updated':
-        return [`${makeLine(node.oldValue, mark.deleted)}`,
+        return [`${makeLine(node.oldValue, mark.removed)}`,
           `${makeLine(node.newValue, mark.added)}`].join('\n');
       case 'unchanged':
         return makeLine(node.value, mark.unchanged);

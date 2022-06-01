@@ -12,7 +12,7 @@ const treeDiff = (obj1, obj2) => {
       return { name: key, value: obj2[key], status: 'added' };
     }
     if (!_.has(obj2, key)) {
-      return { name: key, value: obj1[key], status: 'deleted' };
+      return { name: key, value: obj1[key], status: 'removed' };
     }
     if (_.isObject(obj1[key]) && _.isObject(obj2[key])) {
       return { name: key, children: treeDiff(obj1[key], obj2[key]), status: 'nested' };
