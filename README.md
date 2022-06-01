@@ -46,3 +46,9 @@ $gendiff -f stylish file1.json file2.json
 $gendiff file1.json file2.json
 ```
 [![asciicast](https://asciinema.org/a/dE0kE7hWLxWdOn2FiAXpR8l9P.svg)](https://asciinema.org/a/dE0kE7hWLxWdOn2FiAXpR8l9P)
+
+<div id="stylish">
+    <h3>Plain</h3>
+</div>
+
+[![asciicast](https://asciinema.org/a/S6UmpS0Xbb8H2olaPcOmw0QF1.svg)](https://asciinema.org/a/S6UmpS0Xbb8H2olaPcOmw0QF1)
